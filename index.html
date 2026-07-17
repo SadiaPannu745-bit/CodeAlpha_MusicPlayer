@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="player-container">
+
+    <div class="player-card">
+      <div class="cover-wrapper">
+        <img src="images/cover1.jpg" alt="Album Cover" id="cover" class="rotating">
+      </div>
+
+      <h2 id="song-title">Song Title</h2>
+      <p id="song-artist">Artist Name</p>
+
+      <div class="progress-container" id="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="time-info">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="shuffle-btn" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+        <button id="prev-btn" title="Previous"><i class="fa-solid fa-backward-step"></i></button>
+        <button id="play-btn" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+        <button id="next-btn" title="Next"><i class="fa-solid fa-forward-step"></i></button>
+        <button id="repeat-btn" title="Repeat/Autoplay"><i class="fa-solid fa-repeat"></i></button>
+      </div>
+
+      <div class="volume-container">
+        <i class="fa-solid fa-volume-high"></i>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+      </div>
+    </div>
+
+    <div class="playlist-card">
+      <h3>Playlist</h3>
+      <ul id="playlist"></ul>
+    </div>
+
+  </div>
+
+  <audio id="audio"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
